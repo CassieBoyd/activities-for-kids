@@ -4,13 +4,12 @@ Define four Python functions named run, swing, slide, and hide_and_seek. Each fu
 For example, Jay ran like a fool! or Chantelle slid down the slide!.
 """
 
-const run = (kid) => {
+def run(kid):
     print(f"Run, {kid}, run!")
-}
 
-const swing = (kid) => {
+
+def swing(kid):
     print(f"{kid} is swingin' in the rain, just swingin' in the rain")
-}
 
 def slide(kid):
     print(f"{kid} broke on through to the other slide!")
