@@ -4,13 +4,12 @@ Define four Python functions named run, swing, slide, and hide_and_seek. Each fu
 For example, Jay ran like a fool! or Chantelle slid down the slide!.
 """
 
-const run = (kid) => {
+def run(kid):
     print(f"Run, {kid}, run!")
-}
 
-const swing = (kid) => {
+
+def swing(kid):
     print(f"{kid} is swingin' in the rain, just swingin' in the rain")
-}
 
 def slide(kid):
     print(f"{kid} broke on through to the other slide!")
@@ -27,5 +26,23 @@ swinging_kids = ["Marybeth", "Jenna", "Kevin", "Courtney"]
 sliding_kids = ["Mike", "Jack", "Jennifer", "Earl"]
 hiding_kids = ["Henry", "Heather", "Hayley", "Hugh"]
 
-for kid in running_kids:
-    run(kid)
+def roll_call(kid):
+    if kid in running_kids:
+        run(kid)
+    elif kid in swinging_kids:
+        swing(kid)
+    elif kid in sliding_kids:
+        slide(kid)
+    elif kid in hiding_kids:
+        hide_and_seek(kid)
+
+# for (kid1, kid2, kid3, kid4) in (running_kids, swinging_kids, sliding_kids, hiding_kids):
+#     roll_call(kid1)
+#     roll_call(kid2)
+#     roll_call(kid3)
+#     roll_call(kid4)
+
+# First loop goes through each action in each list and passes it to the second loop which loops the kids in the "action" list through the roll_call function.
+for action in (running_kids, swinging_kids, sliding_kids, hiding_kids):
+    for kid in action:
+        roll_call(kid)
