@@ -26,5 +26,13 @@ swinging_kids = ["Marybeth", "Jenna", "Kevin", "Courtney"]
 sliding_kids = ["Mike", "Jack", "Jennifer", "Earl"]
 hiding_kids = ["Henry", "Heather", "Hayley", "Hugh"]
 
-for kid in running_kids:
+kid = "Will"
+
+if kid in running_kids:
     run(kid)
+elif kid in swinging_kids:
+    swing(kid)
+elif kid in sliding_kids:
+    slide(kid)
+elif kid in hiding_kids:
+    hide_and_seek(kid)
