@@ -42,7 +42,7 @@ def roll_call(kid):
 #     roll_call(kid3)
 #     roll_call(kid4)
 
-# Assigns 
+# First loop goes through each action in each list and passes it to the second loop which loops the kids in the "action" list through the roll_call function.
 for action in (running_kids, swinging_kids, sliding_kids, hiding_kids):
     for kid in action:
         roll_call(kid)
