@@ -26,13 +26,23 @@ swinging_kids = ["Marybeth", "Jenna", "Kevin", "Courtney"]
 sliding_kids = ["Mike", "Jack", "Jennifer", "Earl"]
 hiding_kids = ["Henry", "Heather", "Hayley", "Hugh"]
 
-kid = "Will"
+def roll_call(kid):
+    if kid in running_kids:
+        run(kid)
+    elif kid in swinging_kids:
+        swing(kid)
+    elif kid in sliding_kids:
+        slide(kid)
+    elif kid in hiding_kids:
+        hide_and_seek(kid)
 
-if kid in running_kids:
-    run(kid)
-elif kid in swinging_kids:
-    swing(kid)
-elif kid in sliding_kids:
-    slide(kid)
-elif kid in hiding_kids:
-    hide_and_seek(kid)
+# for (kid1, kid2, kid3, kid4) in (running_kids, swinging_kids, sliding_kids, hiding_kids):
+#     roll_call(kid1)
+#     roll_call(kid2)
+#     roll_call(kid3)
+#     roll_call(kid4)
+
+# Assigns 
+for action in (running_kids, swinging_kids, sliding_kids, hiding_kids):
+    for kid in action:
+        roll_call(kid)
